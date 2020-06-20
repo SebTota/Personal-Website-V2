@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Rubik:100,200,300,400,500,600,700' rel='stylesheet'
+          type='text/css'>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <script src="scripts/terminal.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+
+
+    <title>Sebastian Tota</title>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+        }
+
+        #intro-container {
+            height: calc(100% - 120px); /* opera */
+            height: -webkit-calc(100% - 120px); /* google, safari */
+            height: -moz-calc(100% - 120px); /* firefox */
+            height: -moz-calc(100% - 120px); /* firefox */
+        }
+
+        .intro-name {
+            font-size: 15pt;
+            font-weight: bolder;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .project-card {
+            height: 100%;
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        .image-card {
+            max-height: 300px;
+            max-width: 300px;
+            border: 0;
+            margin: auto;
+        }
+
+        .image-size {
+            padding: 15px;
+        }
+
+        .overlay:hover {
+            opacity: 70%;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 94.5%;
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            transition: .5s;
+            background-color: #4a6b99;
+        }
+
+        .overlay-text {
+            padding: 22px;
+        }
+
+        .overlay-title {
+            color: white;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        @media (min-width: 576px) {
+            .modal-dialog {
+                max-width: 1000px;
+            }
+        }
+
+        .modal {
+            padding: 0;
+        }
+
+        .modal-image {
+            padding: 35px 25px;
+            background-color: #ddd;
+        }
+
+        .modal-close {
+            padding: 16px !important;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .modal-explanation {
+            font-weight: 400;
+        }
+
+        .modal-image-card {
+            width: fit-content;
+            height: fit-content;
+            border: 0;
+            margin: auto;
+        }
+
+        .modal-video-card{
+            max-height: 500px;
+            max-width: 800px;
+            border: 0;
+            margin: auto;
+        }
+
+        .modal-image-size {
+            max-height: 500px;
+            max-width: 800px;
+        }
+
+        @media (max-width: 1000px) {
+            .modal-image-size {
+                width: 100% !important;
+            }
+        }
+
+        .modal-skill-group {
+            white-space: nowrap;
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+
+        .modal-skill {
+            border: none;
+            padding: 5px 15px;
+        }
+
+        #console {
+            font-size: 13px;
+        }
+        .dot {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            float: left;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .console-input {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-family: 'Monaco', 'Courier New', sans-serif;
+        }
+        .console-output {
+            margin-bottom: 10px;
+            font-family: 'Monaco', 'Courier New', serif;
+            padding-left: 4%;
+        }
+        .console-output-2 {
+            margin-bottom: 10px;
+            font-family: 'Monaco', 'Courier New', serif;
+            padding-left: 8%;
+        }
+    </style>
+</head>
+<body>
+<div style="height: 100vh; width: 100%;">
+    <div style="line-height: 100px;">
+        <p class="intro-name ">Sebastian Tota</p>
+    </div>
+
+    <div id="intro-container" class="container" >
+        <div id="console" style="color: #e0e0e0; background-color: #3b3a3a; overflow-y: auto; max-height: 100%;">
+            <div id="console-header" style="height: 20px; background-color: grey; ">
+                <span class="dot" style="background-color:lightcoral;"></span>
+                <span class="dot" style="background-color:yellow;"></span>
+                <span class="dot" style="background-color:lightgreen;"></span>
+            </div>
+            <div id="console-body" style="padding: 15px;">
+                <p class="console-input">Person Sebastian = new Person()</p>
+
+                <div id="console-major">
+                    <p class="console-input"> >>> print(Sebastian.major) </p>
+                    <p class="console-output"> > "Computer Science"</p>
+                </div>
+
+                <div id="console-education">
+                    <p class="console-input"> >>> print(Sebastian.education) </p>
+                    <p class="console-output"> > "Temple University"</p>
+                    <p class="console-output-2"> > "3.92"</p>
+                    <p class="console-output-2"> > "2019-2021"</p>
+                    <p class="console-output"> > "Penn State University"</p>
+                    <p class="console-output-2"> > "3.34"</p>
+                    <p class="console-output-2"> > "2017-2019"</p>
+                </div>
+
+                <div id="console-work-experience">
+                    <p class="console-input"> >>> print(Sebastian.workExperience) </p>
+                    <div>
+                        <p class="console-output"> > "Vanguard"</p>
+                        <p class="console-output-2"> > "Application Development Intern"</p>
+                        <p class="console-output-2"> > "Malvern, PA"</p>
+                    </div>
+                    <div>
+                        <p class="console-output"> > "Temple University"</p>
+                        <p class="console-output-2"> > "IT Help Desk"</p>
+                        <p class="console-output-2"> > "Philadelphia, PA"</p>
+                    </div>
+                </div>
+
+                <div id="console-technical-skills">
+                    <p class="console-input"> >>> print(Sebastian.technicalSkills)</p>
+                    <p class="console-output"> > ["Python", "Java", "Javascript", "Node.js", "C", "HTML", "Bootstrap", "MySQL"]</p>
+                </div>
+
+                <div>
+                    <p class="console-input"> >>> print(Sebastian.links) </p>
+                    <p class="console-output"> > <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sebastian-tota/">"LinkedIn"</a></p>
+                    <p class="console-output"> > <a target="_blank" rel="noopener noreferrer" href="https://github.com/sebtota">"GitHub"</a></p>
+                </div>
+
+                <div>
+                    <p class="console-input"> >>> Sebastian.downloadResume</p>
+                    <p class="console-output"> > PDF Download</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container mb-5">
+    <p style="font-size: 20pt; font-weight: bolder">Projects I have worked on.</p>
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 mt-3">
+            <div class="project-card">
+                <div id="card-1" class="image-card">
+                    <img class="image-size" style="max-width:100%; max-height:100%;" src="logos\vanguard.png"
+                         alt="Vanguard Investment Logo">
+                </div>
+                <div id="overlay-1" class="overlay" data-toggle="modal" data-target="#modal-vanguard">
+                    <div class="overlay-text">
+                        <p class="overlay-title h6">Vanguard</p>
+                        <p class="overlay-title h3">Data Refactoring</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 mt-3">
+            <div class="project-card">
+                <div id="card-2" class="image-card">
+                    <img class="image-size" style="max-width:100%; max-height:100%;" src="logos\templeScheduler.png"
+                         alt="Temple University Logo">
+                </div>
+                <div id="overlay-2" class="overlay" data-toggle="modal" data-target="#modal-class-scheduler">
+                    <div class="overlay-text">
+                        <p class="overlay-title h6">Temple University</p>
+                        <p class="overlay-title h3">Class Scheduler</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 mt-3">
+            <div class="project-card">
+                <div id="card-3" class="image-card">
+                    <img class="image-size" style="max-width:100%; max-height:100%;" src="logos\recap.gif"
+                         alt="reCAPTCHA solver">
+                </div>
+                <div id="overlay-3" class="overlay" data-toggle="modal" data-target="#modal-recaptcha">
+                    <div class="overlay-text">
+                        <p class="overlay-title h3">reCAPTCHA Solver</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="modal-vanguard" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-image">
+                <div class="modal-image-card">
+                    <img class="modal-image-size" src="logos\vanguard.png"
+                         alt="Vanguard Investment Logo">
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <p class="h6">Vanguard</p>
+                    <p class="h3">Data Refactoring</p>
+                    <p class="modal-explanation">Refactoring of an on-premises Global ETF Management system to AWS
+                        cloud-native services.
+                        The project included building Python modules to compare and validate on-premises data to
+                        re-factored
+                        cloud data. Along with data comparison and validation, a UI dashboard was created using
+                        Flask to indicate
+                        discrepancies in the data and provide tools to solve them.</p>
+                    <ul class="list-group list-group-horizontal modal-skill-group">
+                        <li class="modal-skill list-group-item">Python</li>
+                        <li class="modal-skill list-group-item">Pandas</li>
+                        <li class="modal-skill list-group-item">Flask</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-class-scheduler" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-image">
+                <div class="modal-image-card vertical-center">
+                    <img class="modal-image-size" src="logos\templeScheduler2.png"
+                         alt="Temple Class Scheduler">
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <p class="h6">Temple University</p>
+                    <p class="h3">Class Scheduler</p>
+                    <p class="modal-explanation">
+                        Scheduling website for Temple University that allows students to enter all required classes for
+                        a
+                        semester and lists all the possible schedules students can choose. Students can also designate
+                        certain hours of each day as unavailable to avoid being scheduled during those times. Each class
+                        and instructor can be reviewed with a verified '@temple.edu' account.
+                    </p>
+                    <ul class="list-group list-group-horizontal modal-skill-group">
+                        <li class="modal-skill list-group-item">Javascript</li>
+                        <li class="modal-skill list-group-item">Python</li>
+                        <li class="modal-skill list-group-item">Node.js</li>
+                        <li class="modal-skill list-group-item">AWS EC2/RDS</li>
+                        <li class="modal-skill list-group-item">HTML</li>
+                        <li class="modal-skill list-group-item">Bootstrap</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-recaptcha" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-image">
+                <div class="vertical-center">
+                    <div class="modal-video-card embed-responsive embed-responsive-16by9">
+                        <iframe class="modal-video-size embed-responsive-item" src="https://www.youtube.com/embed/Ni_vyMSDcTE"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <p class="h3">reCAPTCHA Solver</p>
+                    <p class="modal-explanation">
+                        Google, "I'm not a robot", reCAPTCHA solver built on top of an open-source project called <a
+                            target="_blank" rel="noopener noreferrer"
+                            href="https://github.com/dessant/buster">Buster</a>. Once a website is specified, it will
+                        complete the reCAPTCHA using Wit.ai's speech-to-text API. Finally, it will store the solution in
+                        a database for client retrieval. Each unique solution is valid for three minutes.
+                        Assuming the target website on which a reCAPTCHA bypass is needed is known in advance, the
+                        client can request workers in advance, then receive the solution when needed allowing an almost
+                        instantaneous bypass.
+                    </p>
+                    <ul class="list-group list-group-horizontal modal-skill-group">
+                        <li class="modal-skill list-group-item">Javascript</li>
+                        <li class="modal-skill list-group-item">Python</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
