@@ -30,8 +30,6 @@
 <script>
     function scrollToElm(id, yOffset) {
         const element = document.getElementById(id);
-        // element.scrollIntoView(true);
-        // document.getElementById("id").scrollTop -= yOffset;
 
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({top: y, behavior: 'smooth'});
@@ -61,7 +59,7 @@
                             <br>
                             <a class="btn btn-md intro-button" target="_blank" href="https://github.com/SebTota">GitHub</a>
                             <br>
-                            <a class="btn btn-md intro-button" onclick="scrollToElm('console', -70)">Resume</a>
+                            <a class="btn btn-md intro-button" onclick="scrollToElm('resume-label', -70)">Resume</a>
                         </div>
                     </div>
                 </div>
@@ -72,9 +70,12 @@
 </div>
 
 <div class="container mb-5">
-    <a style="height:5vh; font-size: 18pt; font-weight: bolder">Projects I have worked on.</a>
+    <div style="height: 5vh;">
+        <a style="font-size: 18pt; font-weight: bolder">Projects I have worked on.</a>
+    </div>
+    <a style="height:5vh; font-size: 10pt; font-weight: bolder">Click on a project for more info.</a>
     <div class="row">
-        <div class="col-lg-12 col-sm-12 mt-3">
+        <div class="col-lg-6 col-sm-12 mt-3">
             <div class="project-card">
                 <div id="card-1" class="image-card">
                     <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/vanguard/2000x2000/vanguard.png"
@@ -88,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-12 col-sm-12 mt-3">
+        <div class="col-lg-6 col-sm-12 mt-3">
             <div class="project-card">
                 <div id="card-2" class="image-card">
                     <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/chandlery/2000x2000/home.png"
@@ -104,7 +105,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-12 col-sm-12 mt-3">
+        <div class="col-lg-6 col-sm-12 mt-3">
             <div class="project-card">
                 <div id="card-3" class="image-card">
                     <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/classScheduler/home.png"
@@ -118,7 +119,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-12 col-sm-12 mt-3">
+        <div class="col-lg-6 col-sm-12 mt-3">
             <div class="project-card">
                 <div id="card-4" class="image-card">
                     <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/gifs/recap.gif"
@@ -135,7 +136,10 @@
 </div>
 
 <!-- Resume Console -->
-<div class="container">
+<div class="container mb-5" style="padding-top: 10px;">
+    <div style="height: 5vh;">
+        <a style="font-size: 18pt; font-weight: bolder" id="resume-label">Resume.</a>
+    </div>
     <div id="console" style="height: 100%;">
         <div id="console-header">
             <span class="dot" style="background-color:lightcoral;"></span>
@@ -145,7 +149,11 @@
         <div id="console-main">
             <div id="console-body" style="padding: 15px;">
                 <p class="console-input">Person Sebastian = new Person()</p>
-
+                <div>
+                    <p class="console-input"> >>> Sebastian.downloadResume</p>
+                    <p class="console-output"> > <a target="_blank" rel="noopener noreferrer"
+                                                    href="https://drive.google.com/uc?export=download&id=1_sTMKDLCcAG_5w-E8Y9ec-_dPCPCpBbB">"PDF Download"</a></p>
+                </div>
                 <div id="console-major">
                     <p class="console-input"> >>> print(Sebastian.major) </p>
                     <p class="console-output"> > "Computer Science"</p>
@@ -192,14 +200,8 @@
                     <p class="console-output"> > <a target="_blank" rel="noopener noreferrer"
                                                     href="https://github.com/sebtota">"GitHub"</a></p>
                 </div>
-
-                <div>
-                    <p class="console-input"> >>> Sebastian.downloadResume</p>
-                    <p class="console-output"> > PDF Download</p>
-                </div>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -220,17 +222,24 @@
                 <div>
                     <p class="h6">Vanguard</p>
                     <p class="h3">Data Refactoring</p>
-                    <p class="modal-explanation">Refactoring of an on-premises Global ETF Management system to AWS
-                        cloud-native services.
-                        The project included building Python modules to compare and validate on-premises data to
-                        re-factored
-                        cloud data. Along with data comparison and validation, a UI dashboard was created using
-                        Flask to indicate
-                        discrepancies in the data and provide tools to solve them.</p>
+                    <p class="modal-explanation">
+                        Increased productivity by creating an automated analytics validation program to find
+                        discrepancies between on-premise and refactored cloud data. Using Python Pandas, cleaned,
+                        compared, and validated data coming from multiple sources to find inconsistencies between
+                        data sources.
+                    </p>
+                    <p class="modal-explanation">
+                        Implemented a market basket optimizer into production using AWS services. Assisted in
+                        refactoring an optimizer application to run as an AWS lambda function. Developed a RESTful
+                        web service to allow interaction between the user interface and the cloud-based market optimizer
+                        application.
+                    </p>
                     <ul class="list-group list-group-horizontal modal-skill-group">
                         <li class="modal-skill list-group-item">Python</li>
                         <li class="modal-skill list-group-item">Pandas</li>
                         <li class="modal-skill list-group-item">Flask</li>
+                        <li class="modal-skill list-group-item">AWS Lambda</li>
+                        <li class="modal-skill list-group-item">AWS Aurora</li>
                     </ul>
                 </div>
             </div>

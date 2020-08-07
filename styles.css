@@ -8,6 +8,10 @@ body {
     font-weight: 500;
 }
 
+.image-size {
+    padding: 10px !important;
+}
+
 #intro-container {
     padding-top: 70px;
     padding-bottom: 30px;
@@ -59,8 +63,6 @@ body {
         width: min-content !important;
     }
 }
-
-
 
 #console-main {
     height: -moz-calc(100% - 20px);
@@ -164,7 +166,7 @@ body {
 
 .modal-skill-group {
     white-space: nowrap;
-    overflow-y: hidden;
+    overflow-y: scroll;
     overflow-x: auto;
 }
 
