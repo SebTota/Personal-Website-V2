@@ -64,6 +64,18 @@ body {
     }
 }
 
+#intro-buttons {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 576px) {
+    #intro-buttons {
+        align-items: center;
+    }
+}
+
 #console-main {
     height: -moz-calc(100% - 20px);
     height: -webkit-calc(100% - 20px);
