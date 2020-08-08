@@ -50,10 +50,9 @@
     <p class="intro-name fixed-top">Sebastian Tota</p>
 </div>
 
-<div style="height: 95vh; width: 100%;">
+<div style="height: 100vh; width: 100%;">
     <div id="intro-container" class="container">
         <div class="row" style="height: 100%;">
-            <!-- your subcol inside the col -->
             <div class="col-sm-6">
                 <div style=height:100%;display:flex;justify-content:center;align-items:center;">
                     <div>
@@ -61,6 +60,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-sm-6">
                 <div style=height:100%;display:flex;justify-content:center;align-items:center;">
                     <div>
@@ -70,17 +70,27 @@
                             <br>
                             <a class="btn btn-md intro-button" target="_blank" href="https://github.com/SebTota">GitHub</a>
                             <br>
+                            <a class="btn btn-md intro-button" onclick="scrollToElm('project-container', -70)">Projects</a>
+                            <br>
                             <a class="btn btn-md intro-button" onclick="scrollToElm('resume-label', -70)">Resume</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
+            <!-- Bouncing down arrow -->
+            <div class="downArrow bounce">
+                <a href="javascript:scrollToElm('project-container', -70)">
+                    <img width="40" height="40" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSLQodC70L7QuV8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNC4yODUsMTEuMjg0TDE2LDE5LjU3MWwtOC4yODUtOC4yODhjLTAuMzk1LTAuMzk1LTEuMDM0LTAuMzk1LTEuNDI5LDAgIGMtMC4zOTQsMC4zOTUtMC4zOTQsMS4wMzUsMCwxLjQzbDguOTk5LDkuMDAybDAsMGwwLDBjMC4zOTQsMC4zOTUsMS4wMzQsMC4zOTUsMS40MjgsMGw4Ljk5OS05LjAwMiAgYzAuMzk0LTAuMzk1LDAuMzk0LTEuMDM2LDAtMS40MzFDMjUuMzE5LDEwLjg4OSwyNC42NzksMTAuODg5LDI0LjI4NSwxMS4yODR6IiBmaWxsPSIjMTIxMzEzIiBpZD0iRXhwYW5kX01vcmUiLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48L3N2Zz4=" />
+                </a>
+            </div>
+
+        </div>
     </div>
 </div>
 
-<div class="container mb-5">
+<!-- Project Tiles -->
+<div class="container mb-5" id="project-container">
     <div style="height: 5vh;">
         <a style="font-size: 18pt; font-weight: bolder">Projects I have worked on.</a>
     </div>
@@ -147,7 +157,7 @@
 </div>
 
 <!-- Resume Console -->
-<div class="container mb-5" style="padding-top: 10px;">
+<div class="container mb-5" style="padding-top: 20px;">
     <div style="height: 5vh;">
         <a style="font-size: 18pt; font-weight: bolder" id="resume-label">Resume.</a>
     </div>
@@ -163,7 +173,7 @@
                 <div>
                     <p class="console-input"> >>> Sebastian.downloadResume</p>
                     <p class="console-output"> > <a target="_blank" rel="noopener noreferrer"
-                                                    href="https://drive.google.com/uc?export=download&id=1_sTMKDLCcAG_5w-E8Y9ec-_dPCPCpBbB">"PDF Download"</a></p>
+                                                    href="https://drive.google.com/uc?export=download&id=1EfzCdqs_Nxx5lWbMutP6J4x5SbKtEbwt">"PDF Download"</a></p>
                 </div>
                 <div id="console-major">
                     <p class="console-input"> >>> print(Sebastian.major) </p>
@@ -302,13 +312,15 @@
                 <div>
                     <p class="h6">Vanguard</p>
                     <p class="h3">Online Chandlery Store</p>
-                    <p class="modal-explanation">Refactoring of an on-premises Global ETF Management system to AWS
-                        cloud-native services.
-                        The project included building Python modules to compare and validate on-premises data to
-                        re-factored
-                        cloud data. Along with data comparison and validation, a UI dashboard was created using
-                        Flask to indicate
-                        discrepancies in the data and provide tools to solve them.</p>
+                    <p class="modal-explanation">
+                        The Chandlery is an online store developed in collaboration with 8 interns during the Vanguard
+                        2020 C2C Internship.
+                    </p>
+                    <p class="modal-explanation">
+                        The Chandlery was built using the MEAN stack and included functionality to create new accounts,
+                        see your order history, and create new orders. An inventory tracking system kept track of
+                        what was available for sale, and what was out of stock.
+                    </p>
                     <ul class="list-group list-group-horizontal modal-skill-group">
                         <li class="modal-skill list-group-item">Node.js</li>
                         <li class="modal-skill list-group-item">Express</li>
@@ -336,6 +348,7 @@
                 <div>
                     <p class="h6">Temple University</p>
                     <p class="h3">Class Scheduling Tool</p>
+                    <a href="https://schedule.sebtota.com" target="_blank">Official Website</a>
                     <p class="modal-explanation">
                         A full-stack application focused on simplifying the course scheduling process for Temple
                         University students.</p>
@@ -377,16 +390,22 @@
             </div>
             <div class="modal-body">
                 <div>
+                    <p class="h6">noReCap</p>
                     <p class="h3">reCAPTCHA Solver</p>
                     <p class="modal-explanation">
-                        Google, "I'm not a robot", reCAPTCHA solver built on top of an open-source project called <a
-                            target="_blank" rel="noopener noreferrer"
-                            href="https://github.com/dessant/buster">Buster</a>. Once a website is specified, it will
-                        complete the reCAPTCHA using Wit.ai's speech-to-text API. Finally, it will store the solution in
-                        a database for client retrieval. Each unique solution is valid for three minutes.
-                        Assuming the target website on which a reCAPTCHA bypass is needed is known in advance, the
-                        client can request workers in advance, then receive the solution when needed allowing an almost
-                        instantaneous bypass.
+                        The noReCap reCaptcha solver takes the frustration our of Google, "I'm not a robot",
+                        reCAPTCHA by allowing users to bypass
+                        it completely. The solver is built on top of an open-source project called
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/dessant/buster">Buster</a>.
+                    </p>
+                    <p class="modal-explanation">
+                        Once a website is specified, noReCap automates the reCaptcha solving process using Wit.ai's
+                        speech-to-text API in just seconds. By storing the solution in a database, the end-user can
+                        easily integrate noReCap into any automation script using the easy to use API.
+                    </p>
+                    <p class="modal-explanation">
+                        If a website domain for which a reCaptcha solution is needed is known in advance, the client
+                        can request solutions in advance allowing almost instantaneous bypass of Google's reCaptcha.
                     </p>
                     <ul class="list-group list-group-horizontal modal-skill-group">
                         <li class="modal-skill list-group-item">Javascript</li>
@@ -400,13 +419,9 @@
 
 <!-- Footer -->
 <footer class="page-footer font-small blue">
-
-    <!-- Copyright -->
     <div class="footer-copyright text-center py-3">
         Sebastian Tota - Email admin@sebtota.com with all inquiries.
     </div>
-    <!-- Copyright -->
-
 </footer>
 
 </body>
