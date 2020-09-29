@@ -187,6 +187,10 @@ body {
     padding: 5px 15px;
 }
 
+.experience-list-group {
+    overflow-y: hidden;
+}
+
 #console {
     font-size: 13px;
 }

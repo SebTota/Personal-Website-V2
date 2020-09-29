@@ -98,37 +98,21 @@
     <div class="row">
         <div class="col-lg-6 col-sm-12 mt-3">
             <div class="project-card">
-                <div id="card-1" class="image-card">
-                    <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/vanguard/2000x2000/vanguard.png"
-                         alt="Vanguard Investment Logo">
+                <div id="card-human-pose-running" class="image-card">
+                    <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/gifs/human-pose-running.gif"
+                         alt="Running Form Analysis">
                 </div>
-                <div id="overlay-1" class="overlay" data-toggle="modal" data-target="#modal-vanguard">
+                <div id="overlay-human-pose-running" class="overlay" data-toggle="modal" data-target="#modal-human-pose-running">
                     <div class="overlay-text">
-                        <p class="overlay-title h6">Vanguard</p>
-                        <p class="overlay-title h3">Data Refactoring</p>
+                        <p class="overlay-title h6">Running Form Analysis</p>
+                        <p class="overlay-title h3">TrueForm</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-lg-6 col-sm-12 mt-3">
             <div class="project-card">
-                <div id="card-2" class="image-card">
-                    <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/chandlery/2000x2000/home.png"
-                         alt="Chandlery store home page">
-                </div>
-                <div id="overlay-2" class="overlay" data-toggle="modal" data-target="#modal-chandlery">
-                    <div class="overlay-text">
-                        <p class="overlay-title h6">Vanguard</p>
-                        <p class="overlay-title h3">Online Chandlery</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-6 col-sm-12 mt-3">
-            <div class="project-card">
-                <div id="card-3" class="image-card">
+                <div id="card-classScheduler" class="image-card">
                     <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/classScheduler/home.png"
                          alt="Temple University Logo">
                 </div>
@@ -140,9 +124,59 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row">
         <div class="col-lg-6 col-sm-12 mt-3">
             <div class="project-card">
-                <div id="card-4" class="image-card">
+                <div id="card-vanguard" class="image-card">
+                    <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/vanguard/2000x2000/vanguard.png"
+                         alt="Vanguard Investment Logo">
+                </div>
+                <div id="overlay-vanguard" class="overlay" data-toggle="modal" data-target="#modal-vanguard">
+                    <div class="overlay-text">
+                        <p class="overlay-title h6">Vanguard</p>
+                        <p class="overlay-title h3">Data Refactoring</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 mt-3">
+            <div class="project-card">
+                <div id="card-chandlery" class="image-card">
+                    <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/chandlery/2000x2000/home.png"
+                         alt="Chandlery store home page">
+                </div>
+                <div id="overlay-chandlery" class="overlay" data-toggle="modal" data-target="#modal-chandlery">
+                    <div class="overlay-text">
+                        <p class="overlay-title h6">Vanguard</p>
+                        <p class="overlay-title h3">Online Chandlery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <!--
+<div class="col-lg-6 col-sm-12 mt-3">
+            <div class="project-card">
+                <div id="card-tuportal" class="image-card">
+                    <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/temple/temple-university.svg"
+                         alt="Temple University Logo">
+                </div>
+                <div id="overlay-tuportal" class="overlay" data-toggle="modal" data-target="#modal-tuportal">
+                    <div class="overlay-text">
+                        <p class="overlay-title h6">Temple University</p>
+                        <p class="overlay-title h3">TU-Portal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    -->
+        <div class="col-lg-6 col-sm-12 mt-3">
+            <div class="project-card">
+                <div id="card-recaptcha-solver" class="image-card">
                     <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/gifs/recap.gif"
                          alt="reCAPTCHA solver">
                 </div>
@@ -227,6 +261,126 @@
 </div>
 
 <!-- Modals -->
+<div class="modal fade" id="modal-human-pose-running" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-image">
+                <div class="vertical-center">
+                    <div class="modal-video-card embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Pqf5CaOl8QU" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <p class="h6">Running Form Analysis</p>
+                    <p class="h3">TrueForm</p>
+                    <p class="modal-explanation">
+                        TrueForm is a Python application used to estimate running form from 2D video using
+                        Human Pose Estimation. It uses
+                        <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose" target="_blank">OpenPose</a>,
+                        a real-time multi-person system to detect human body keypoints on images to estimate
+                        the major joints in the body, from which it is then able to analyse a runners form.
+                        The application aims to improve the performance of long-distance runners, while decreasing the risk
+                        of injury with easily accessible technology.
+                    </p>
+                    <p class="modal-explanation">
+                        Measurements include: cadence, stride length, leg and arm swing symmetry, oscillation,
+                        angle of knee upon impact, and foot strike among other measurements. All these measurements
+                        are then analysed to give suggestions on improving running form.
+                    </p>
+                    <ul class="experience-list-group list-group list-group-horizontal modal-skill-group">
+                        <li class="modal-skill list-group-item">Python</li>
+                        <li class="modal-skill list-group-item">CV2</li>
+                        <li class="modal-skill list-group-item">NumPy</li>
+                        <li class="modal-skill list-group-item">SciPy</li>
+                        <li class="modal-skill list-group-item">Matplotlib</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-class-scheduler" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-image">
+                <div class="modal-image-card vertical-center">
+                    <img class="modal-image-size" src="assets/classScheduler/2000x1000/home.png"
+                         alt="Temple Class Scheduler">
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <p class="h6">Temple University</p>
+                    <p class="h3">Class Scheduling Tool</p>
+                    <a href="https://schedule.sebtota.com" target="_blank">Official Website</a>
+                    <p class="modal-explanation">
+                        A full-stack application focused on simplifying the course scheduling process for Temple
+                        University students.</p>
+                    <p class="modal-explanation">
+                        After specifying desired courses, students can view all the possible schedules for a given
+                        semester without time conflicts. Students can also enter desired times they are not available
+                        during the week to avoid scheduling conflicts with events outside of school.</p>
+                    <p class="modal-explanation">
+                        One of the major deciding factors for students choosing which section of a class to take
+                        depends on the professor's past performance. With a verified Temple University student review
+                        system in place, students with a Temple University email address can leave an anonymous
+                        professor review to aid the decision process for future students.</p>
+                    <ul class="experience-list-group list-group list-group-horizontal modal-skill-group">
+                        <li class="modal-skill list-group-item">Javascript</li>
+                        <li class="modal-skill list-group-item">Python</li>
+                        <li class="modal-skill list-group-item">Node.js</li>
+                        <li class="modal-skill list-group-item">AWS EC2/RDS</li>
+                        <li class="modal-skill list-group-item">HTML</li>
+                        <li class="modal-skill list-group-item">Bootstrap</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+<div class="modal fade" id="modal-temple" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-image">
+                <div class="modal-image-card">
+                    <img class="modal-image-size" src="assets/vanguard/2000x1000/vanguard.png"
+                         alt="Temple University Logo">
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <p class="h6">Temple University</p>
+                    <p class="h3">TU-Portal</p>
+                    <p class="modal-explanation">
+                    </p>
+                    <p class="modal-explanation">
+                    </p>
+                    <ul class="experience-list-group list-group list-group-horizontal modal-skill-group">
+                        <li class="modal-skill list-group-item">Python</li>
+                        <li class="modal-skill list-group-item">Pandas</li>
+                        <li class="modal-skill list-group-item">Flask</li>
+                        <li class="modal-skill list-group-item">AWS Lambda</li>
+                        <li class="modal-skill list-group-item">AWS Aurora</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-->
 <div class="modal fade" id="modal-vanguard" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -255,7 +409,7 @@
                         web service to allow interaction between the user interface and the cloud-based market optimizer
                         application.
                     </p>
-                    <ul class="list-group list-group-horizontal modal-skill-group">
+                    <ul class="experience-list-group list-group list-group-horizontal modal-skill-group">
                         <li class="modal-skill list-group-item">Python</li>
                         <li class="modal-skill list-group-item">Pandas</li>
                         <li class="modal-skill list-group-item">Flask</li>
@@ -321,53 +475,11 @@
                         see your order history, and create new orders. An inventory tracking system kept track of
                         what was available for sale, and what was out of stock.
                     </p>
-                    <ul class="list-group list-group-horizontal modal-skill-group">
+                    <ul class="experience-list-group list-group list-group-horizontal modal-skill-group">
                         <li class="modal-skill list-group-item">Node.js</li>
                         <li class="modal-skill list-group-item">Express</li>
                         <li class="modal-skill list-group-item">Angular</li>
                         <li class="modal-skill list-group-item">Mongo DB</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="modal-class-scheduler" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="modal-image">
-                <div class="modal-image-card vertical-center">
-                    <img class="modal-image-size" src="assets/classScheduler/2000x1000/home.png"
-                         alt="Temple Class Scheduler">
-                </div>
-            </div>
-            <div class="modal-body">
-                <div>
-                    <p class="h6">Temple University</p>
-                    <p class="h3">Class Scheduling Tool</p>
-                    <a href="https://schedule.sebtota.com" target="_blank">Official Website</a>
-                    <p class="modal-explanation">
-                        A full-stack application focused on simplifying the course scheduling process for Temple
-                        University students.</p>
-                    <p class="modal-explanation">
-                        After specifying desired courses, students can view all the possible schedules for a given
-                        semester without time conflicts. Students can also enter desired times they are not available
-                        during the week to avoid scheduling conflicts with events outside of school.</p>
-                    <p class="modal-explanation">
-                        One of the major deciding factors for students choosing which section of a class to take
-                        depends on the professor's past performance. With a verified Temple University student review
-                        system in place, students with a Temple University email address can leave an anonymous
-                        professor review to aid the decision process for future students.</p>
-                    <ul class="list-group list-group-horizontal modal-skill-group">
-                        <li class="modal-skill list-group-item">Javascript</li>
-                        <li class="modal-skill list-group-item">Python</li>
-                        <li class="modal-skill list-group-item">Node.js</li>
-                        <li class="modal-skill list-group-item">AWS EC2/RDS</li>
-                        <li class="modal-skill list-group-item">HTML</li>
-                        <li class="modal-skill list-group-item">Bootstrap</li>
                     </ul>
                 </div>
             </div>
@@ -407,7 +519,7 @@
                         If a website domain for which a reCaptcha solution is needed is known in advance, the client
                         can request solutions in advance allowing almost instantaneous bypass of Google's reCaptcha.
                     </p>
-                    <ul class="list-group list-group-horizontal modal-skill-group">
+                    <ul class="experience-list-group list-group list-group-horizontal modal-skill-group">
                         <li class="modal-skill list-group-item">Javascript</li>
                         <li class="modal-skill list-group-item">Python</li>
                     </ul>
