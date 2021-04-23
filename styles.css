@@ -8,10 +8,29 @@ body {
     font-weight: 500;
 }
 
-.image-size {
-    padding: 10px !important;
+.project-card {
+    height: 100%;
+    width: 100%;
+    background-color: #ddd;
+}
+
+.image-card {
     height: 400px;
     width: 400px;
+    border: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.image-size {
+    padding: 10px !important;
+    vertical-align: middle;
+}
+
+.image-vertical-spacing-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 #intro-container {
@@ -95,18 +114,7 @@ body {
     border-top-right-radius: 7px;
 }
 
-.project-card {
-    height: 100%;
-    width: 100%;
-    background-color: #ddd;
-}
 
-.image-card {
-    height: 400px;
-    width: 400px;
-    border: 0;
-    margin: auto;
-}
 
 .overlay:hover {
     opacity: 70%;
