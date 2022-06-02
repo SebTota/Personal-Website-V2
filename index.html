@@ -113,6 +113,22 @@
         <div class="col-lg-6 col-sm-12 mt-3">
             <div class="project-card">
                 <div id="card-classScheduler" class="image-card">
+                    <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/tiptapsn/TipTapSNDocumentExample.png"
+                         alt="Temple University Logo">
+                </div>
+                <div id="overlay-tiptapsn" class="overlay" data-toggle="modal" data-target="#modal-tiptapsn">
+                    <div class="overlay-text">
+                        <p class="overlay-title h6">TipTapSN</p>
+                        <p class="overlay-title h3">Collaborative Note Editor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 mt-3">
+            <div class="project-card">
+                <div id="card-classScheduler" class="image-card">
                     <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/classScheduler/home.png"
                          alt="Temple University Logo">
                 </div>
@@ -124,8 +140,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-lg-6 col-sm-12 mt-3">
             <div class="project-card">
                 <div id="card-vanguard" class="image-card">
@@ -136,20 +150,6 @@
                     <div class="overlay-text">
                         <p class="overlay-title h6">Vanguard</p>
                         <p class="overlay-title h3">Data Refactoring</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6 col-sm-12 mt-3">
-            <div class="project-card">
-                <div id="card-chandlery" class="image-card">
-                    <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/chandlery/2000x2000/home.png"
-                         alt="Chandlery store home page">
-                </div>
-                <div id="overlay-chandlery" class="overlay" data-toggle="modal" data-target="#modal-chandlery">
-                    <div class="overlay-text">
-                        <p class="overlay-title h6">Vanguard</p>
-                        <p class="overlay-title h3">Online Chandlery</p>
                     </div>
                 </div>
             </div>
@@ -169,10 +169,64 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-6 col-sm-12 mt-3">
+            <div class="project-card">
+                <div id="card-chandlery" class="image-card">
+                    <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/chandlery/2000x2000/home.png"
+                         alt="Chandlery store home page">
+                </div>
+                <div id="overlay-chandlery" class="overlay" data-toggle="modal" data-target="#modal-chandlery">
+                    <div class="overlay-text">
+                        <p class="overlay-title h6">Vanguard</p>
+                        <p class="overlay-title h3">Online Chandlery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <!-- Modals -->
+<div class="modal fade" id="modal-tiptapsn" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-image">
+                <div class="modal-image-card vertical-center">
+                    <span class="border border-dark">
+                        <img class="modal-image-size" src="assets/tiptapsn/TipTapSNDocumentExample.png"
+                         alt="TipTapSN">
+                    </span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <p class="h3">TipTapSN - A collaborative note editor for Standard Notes</p>
+                    <a href="https://sebtota.github.io/TipTapSN/" target="_blank">Live Demo</a> | 
+                    <a href="https://github.com/SebTota/TipTapSN" target="_blank">GitHub</a> | 
+                    <a href="https://drive.google.com/file/d/1zgZXtHYWN3DweDkmvSAioeLVHQhykvHY/view?usp=sharing" target="_blank">Video Example</a>
+                    <p class="modal-explanation">
+                        TipTapSN is the first collaborative note editor built for the Standard Notes end-to-end 
+                        encrypted note taking application.</p>
+                    <p class="modal-explanation">
+                        With so many people attending school and work virtually these days, we need an easy and secure way to 
+                        share our notes while keeping privacy in mind! TipTapSN is a collaborative note editor for Standard Notes, 
+                        which is an end-to-end encrypted note taking application. It builds on top of regular note editors within 
+                        Standard Notes by providing a secure way for users to share their notes with others while still keeping 
+                        privacy top of mind. Using WebRTC, TipTapSN never stores unencrypted data on a remote server and the sharing 
+                        session is only active for as long as the host specifies.</p>
+                    <ul class="experience-list-group list-group list-group-horizontal modal-skill-group">
+                        <li class="modal-skill list-group-item">Vue</li>
+                        <li class="modal-skill list-group-item">JavaScript</li>
+                        <li class="modal-skill list-group-item">WebRTC</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="modal fade" id="modal-human-pose-running" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -246,7 +300,6 @@
                         depends on the professor's past performance. With a verified Temple University student review
                         system in place, students with a Temple University email address can leave an anonymous
                         professor review to aid the decision process for future students.</p>
-                    <p class="modal-explanation">This application is not associated with Temple University.</p>
                     <ul class="experience-list-group list-group list-group-horizontal modal-skill-group">
                         <li class="modal-skill list-group-item">Javascript</li>
                         <li class="modal-skill list-group-item">Python</li>
