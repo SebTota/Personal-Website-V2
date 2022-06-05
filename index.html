@@ -97,6 +97,36 @@
     <div class="row">
         <div class="col-lg-6 col-sm-12 mt-3">
             <div class="project-card">
+                <div id="card-strava-calendar-sync" class="image-card">
+                    <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/calendarSync/strava-calendar-sync-phone-example.png"
+                         alt="ActiveCalendar">
+                </div>
+                <div id="overlay-strava-calendar-sync" class="overlay" data-toggle="modal" data-target="#modal-active-calendar">
+                    <div class="overlay-text">
+                        <p class="overlay-title h6">ActiveCalendar</p>
+                        <p class="overlay-title h3">Calendar Running Summary</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 mt-3">
+            <div class="project-card">
+                <div id="card-note" class="image-card">
+                    <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/note/note.png"
+                         alt="Note">
+                </div>
+                <div id="overlay-note" class="overlay" data-toggle="modal" data-target="#modal-note">
+                    <div class="overlay-text">
+                        <p class="overlay-title h6">Note</p>
+                        <p class="overlay-title h4">End-To-End Encrypted Note Taking Application</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 mt-3">
+            <div class="project-card">
                 <div id="card-human-pose-running" class="image-card">
                     <span class="image-vertical-spacing-helper"></span>
                     <img class="image-size" style="max-width:100%; max-height:100%;" src="assets/gifs/human-pose-running.gif"
@@ -104,8 +134,8 @@
                 </div>
                 <div id="overlay-human-pose-running" class="overlay" data-toggle="modal" data-target="#modal-human-pose-running">
                     <div class="overlay-text">
-                        <p class="overlay-title h6">Running Form Analysis</p>
-                        <p class="overlay-title h3">TrueForm</p>
+                        <p class="overlay-title h6">TrueForm</p>
+                        <p class="overlay-title h3">Running Form Analysis</p>
                     </div>
                 </div>
             </div>
@@ -187,6 +217,76 @@
 </div>
 
 <!-- Modals -->
+<div class="modal fade" id="modal-active-calendar" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-image">
+                <div class="modal-image-card vertical-center">
+                    <img class="modal-image-size" src="assets/calendarSync/strava-calendar-sync-phone-example.png"
+                         alt="ActiveCalendar Google Calendar Phone App">
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <p class="h3">ActiveCalendar</p>
+                    <a href="https://strava.sebtota.com" target="_blank">Website</a> |
+                    <a href="https://github.com/SebTota/ActiveCalendar" target="_blank">GitHub</a>
+                    <p class="modal-explanation">
+                        ActiveCalendar provides an aggregate view of your training sessions on a per activity, daily, and weekly level
+                    to assist you in planning out and tracking your training schedule.</p>
+                    <p class="modal-explanation">
+                        Do you track multiple activiites in a single day? Do you want to know exactly how many miles you ran, walked, and bikes over the past week? 
+                    How about determining what the average pace for each of those activities was over the past week? ActiveCalendar allows users
+                    to connect their Strava and Google Calendar account to make their aggregate training data easily viewable. With the ability to track an aggregate
+                    on all activities, or summarizing activiites on a per activity type (running, biking, etc.) level, ActiveCalendar gives users the 
+                    customization to track their goals however they see fit.</p>
+                    <ul class="experience-list-group list-group list-group-horizontal modal-skill-group">
+                        <li class="modal-skill list-group-item">Python</li>
+                        <li class="modal-skill list-group-item">Vue.js</li>
+                        <li class="modal-skill list-group-item">Google Firestore</li>
+                        <li class="modal-skill list-group-item">Google Compute Engine</li>
+                        <li class="modal-skill list-group-item">Google Cloud Functions</li>
+                        <li class="modal-skill list-group-item">Google PubSub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-note" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-image">
+                <div class="modal-image-card vertical-center">
+                    <img class="modal-image-size" src="assets/note/note.png"
+                         alt="Note Desktop App">
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <p class="h3">Note - Encrypted Note Taking Application</p>
+                    <a href="https://github.com/SebTota/StravaCalendarSummaryWebService" target="_blank">GitHub</a>
+                    <p class="modal-explanation">Note is a cross-platofrm end-to-end encrypted note taking application with cloud sync support.</p>
+                    <p class="modal-explanation">With the ability to encrypt all file content, including text, images, and even the 
+                        file and folder names, Note gives users the privacy that they need with the convenience and backup security
+                        of cloud syncing. 
+                    </p>
+                    <ul class="experience-list-group list-group list-group-horizontal modal-skill-group">
+                        <li class="modal-skill list-group-item">Electron</li>
+                        <li class="modal-skill list-group-item">Encryption</li>
+                        <li class="modal-skill list-group-item">Google Drive API</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="modal fade" id="modal-tiptapsn" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -195,10 +295,8 @@
             </button>
             <div class="modal-image">
                 <div class="modal-image-card vertical-center">
-                    <span class="border border-dark">
-                        <img class="modal-image-size" src="assets/tiptapsn/TipTapSNDocumentExample.png"
+                    <img class="modal-image-size" src="assets/tiptapsn/TipTapSNDocumentExample.png"
                          alt="TipTapSN">
-                    </span>
                 </div>
             </div>
             <div class="modal-body">
@@ -362,7 +460,7 @@
             </button>
             <div class="modal-image">
                 <div class="modal-image-card">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -385,11 +483,11 @@
                         </div>
 
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span style="background-color: #999;" class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
                         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span style="background-color: #999;" class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
                     </div>

@@ -303,3 +303,11 @@ body {
         transform: translateY(-15px);
     }
 }
+
+.carousel-control-prev {
+    background: linear-gradient(to left, transparent, darkgray)
+}
+
+.carousel-control-next {
+    background: linear-gradient(to right, transparent, darkgray)
+}
